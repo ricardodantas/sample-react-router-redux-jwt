@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "flow": "flow",
+    "production": "npm run build && node server.js",
     "start": "webpack-dev-server --open",
     "clean": "rimraf dist",
     "lint": "eslint src test",
@@ -60,6 +61,7 @@
   },
   "dependencies": {
     "axios": "^0.16.1",
+    "express": "^4.15.2",
     "history": "^4.6.1",
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
