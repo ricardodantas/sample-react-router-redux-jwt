@@ -11,7 +11,7 @@ export default class Header extends Component {
     const { children } = this.props;
 
     return (
-      <header>        
+      <header>
         {children}
       </header>
     );

@@ -14,16 +14,17 @@ class App extends Component {
   static propTypes = {
     children: PropTypes.any.isRequired,
     styles: PropTypes.object,
-    isAuthenticated: PropTypes.bool.isRequired
+    isAuthenticated: PropTypes.bool.isRequired,
+    history: PropTypes.object.isRequired,
   }
 
   render() {
-    const { children, styles, isAuthenticated} = this.props
+    const { children, styles, isAuthenticated, history} = this.props
 
     return (
       <div>
         <Header>
-          <Nav isAuthenticated={isAuthenticated}/>
+          <Nav history={history} isAuthenticated={isAuthenticated}/>
         </Header>
         <Container>
           {children}

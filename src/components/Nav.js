@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { Link, Redirect} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Container } from 'semantic-ui-react'
 import {logout} from '../actions/login'
 
@@ -10,11 +10,14 @@ class Nav extends Component {
   static propTypes = {
     isAuthenticated: PropTypes.bool.isRequired,
     logout: PropTypes.func.isRequired,
+    history: PropTypes.object.isRequired,
   }
 
-  logout() {
-    const {dispatch, logout} = this.props
+  logout(event) {
+    event.preventDefault()
+    const {dispatch, logout, history } = this.props
     dispatch(logout())
+    history.push('/login')
   }
 
   render() {
