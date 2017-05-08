@@ -9,10 +9,12 @@ class Nav extends Component {
 
   static propTypes = {
     isAuthenticated: PropTypes.bool.isRequired,
+    logout: PropTypes.func.isRequired,
   }
 
   logout() {
-    const {dispatch} = this.props
+    const {dispatch, logout} = this.props
+
     dispatch(logout())
   }
 
@@ -41,13 +43,13 @@ class Nav extends Component {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    dispatch
+    dispatch,
+    logout
   }
 }
 
 const mapStateToProps = (state) => {
-  return {
-  }
+  return {}
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Nav)

@@ -18,8 +18,9 @@ export default handleActions({
     return Object.assign({}, state, {
       isAuthenticated: false,
       token: null,
+      response: {},
     })
-  },  
+  },
   [loginFetching]: (state, action) => {
     return Object.assign({}, state, {
       isAuthenticated: false,
