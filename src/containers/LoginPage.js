@@ -3,9 +3,7 @@ import PropTypes from 'prop-types'
 import {Redirect} from 'react-router-dom'
 import { connect } from 'react-redux'
 import LoginForm from '../components/LoginForm'
-// import * as LoginActions from '../actions/login'
 import {login} from '../actions/login'
-// import wrapActionCreators from '../utils/wrapActionCreators'
 import { Dimmer, Loader, Header } from 'semantic-ui-react'
 
 class LoginPage extends Component {
@@ -35,15 +33,10 @@ class LoginPage extends Component {
     dispatch(login(email, password))
   }
 
-  // componentWillReceiveProps (nextProps) {
-  //   const {isAuthenticated, token} = nextProps.requestLogin
-  //   const {push, dispatch} = nextProps.history
-  // }
-
   render() {
     const {requestLogin, location} = this.props
     const {isAuthenticated} = requestLogin
-    
+
     if(isAuthenticated) {
       return <Redirect to="/"/>
     }

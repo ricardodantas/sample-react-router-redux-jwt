@@ -27,7 +27,7 @@ class HomePage extends Component {
       const created = moment(item.created).from(new Date)
 
       return (
-        <Card>
+        <Card key={item.created}>
           <Card.Content>
             <Card.Header>
               <ReactAudioPlayer src={item.url} />
