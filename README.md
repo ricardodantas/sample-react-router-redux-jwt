@@ -1,43 +1,25 @@
 # I2x Challenge - Frontend
 The I2x code challenge for Frontend position.
 
+## Live demo:
+[https://i2x-challenge-frontend.herokuapp.com/](https://i2x-challenge-frontend.herokuapp.com/)
+
 ## Setup:
 
 ```sh
-npm install -g yo
-npm install -g generator-redux-stack
 npm install
 ```
 
 ## Usage
 
 ```sh
-$ npm start
+$ npm start #dev mode
+$ npm run build #build for production
+
+OR
+
+$ node run production #build package and start server
 ```
 
-## Module Generators
-
-### Generate a new container:
-
-```sh
-yo redux-stack:container
-```
-
-### Generate a new component:
-
-```sh
-yo redux-stack:component
-```
-
-### Generate a new set of actions with corresponding reducer:
-
-```sh
-yo redux-stack:actions
-```
-
-### Keyboard Shortcuts
-
-+ <kbd>ctrl</kbd> + <kbd>h</kbd> - Show/hide `redux-devtools` dock
-+ <kbd>ctrl</kbd> + <kbd>c</kbd> - Change `redux-devtools` monitor
-+ <kbd>ctrl</kbd> + <kbd>m</kbd> - Move `redux-devtools` dock
-+ <kbd>ctrl</kbd> + <kbd>e</kbd> - Show redux import/export tool
+## Deploy
+The deployment is automated by Heroku, for each git push on `master` branch a deployment is made.
