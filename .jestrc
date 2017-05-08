@@ -1,0 +1,10 @@
+{
+  "testRegex": "(/test/.*|(\\.|/))\\.spec\\.js?$",
+  "moduleFileExtensions": [
+    "js",
+    "json"
+  ],
+  "moduleNameMapper": {
+    "^.+\\.(scss)$": "<rootDir>/node_modules/jest-css-modules"
+  }
+}

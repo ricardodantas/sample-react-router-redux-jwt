@@ -1,0 +1,16 @@
+.counter {
+  min-width: 90px;
+  display: inline-block;
+}
+
+.button {
+  margin-left: 5px;
+  background: #eee;
+  border: 1px solid #ccc;
+  transition: background 0.2s;
+
+  &:hover {
+    background: #ddd;
+    cursor: pointer;
+  }
+}
