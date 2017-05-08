@@ -6,6 +6,10 @@ process.env.PWD = process.cwd();
 
 app.use(express.static(path.join(process.env.PWD, 'dist'))); //  "public" off of current is root
 
+app.get('/*', function(req, res){
+  res.sendFile(__dirname + '/dist/index.html');
+});
+
 app.listen(port);
 
 console.log('Listening on port '+port);
