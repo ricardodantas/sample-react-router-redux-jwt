@@ -14,7 +14,6 @@ class Nav extends Component {
 
   logout() {
     const {dispatch, logout} = this.props
-
     dispatch(logout())
   }
 

@@ -8,6 +8,9 @@ import moment from 'moment'
 import ReactAudioPlayer from 'react-audio-player';
 
 class HomePage extends Component {
+  static propTypes = {
+    list: PropTypes.object,
+  }
 
   componentDidMount() {
     const {dispatch} = this.props
@@ -78,7 +81,7 @@ const mapDispatchToProps = (dispatch) => {
 const mapStateToProps = (state) => {
 
   return {
-    list: state.list
+    list: state.list,
   }
 }
 
