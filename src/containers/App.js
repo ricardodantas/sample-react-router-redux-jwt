@@ -13,9 +13,12 @@ import _ from 'lodash'
 
 class App extends Component {
   static propTypes = {
+    dispatch: PropTypes.func.isRequired,
     children: PropTypes.any.isRequired,
     styles: PropTypes.object,
     isAuthenticated: PropTypes.bool.isRequired,
+    match: PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired,
     history: PropTypes.object.isRequired,
   }
 
