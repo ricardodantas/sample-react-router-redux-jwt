@@ -14,7 +14,6 @@ const initialState = {
 export default handleActions({
 
   [logout]: (state, action) => {
-    doLogout()
     return Object.assign({}, state, {
       isAuthenticated: false,
       token: null,
@@ -32,17 +31,11 @@ export default handleActions({
     })
   },
   [loginSuccess]: (state, action) => {
-    const {token} = action.payload
-
-    if(token){
-      sessionStorage.setItem('token', token)
-    }
-
     return Object.assign({}, state, {
       isAuthenticated: true,
       isFetching: false,
       hasSuccess: true,
-      token: token,
+      token: action.payload.token,
       response: action
     })
   },
