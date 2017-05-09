@@ -1,6 +1,5 @@
 import { handleActions } from 'redux-actions'
 import {listFetching, listSuccess, listError} from '../actions/list'
-import _ from 'lodash'
 
 const initialState = {
   isFetching: false,

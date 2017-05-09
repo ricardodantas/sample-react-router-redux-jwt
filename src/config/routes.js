@@ -4,7 +4,6 @@ import LoginPage from '../containers/LoginPage'
 import HomePage from '../containers/HomePage'
 import NotFoundPage from '../containers/NotFoundPage'
 import PrivateRoute from './PrivateRoute'
-import _ from 'lodash'
 
 export default (
   <Router>

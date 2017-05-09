@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
-import cssModules from 'react-css-modules'
 import Header from '../components/Header'
 import Nav from '../components/Nav'
 import { Container } from 'semantic-ui-react'
-import styles from '../style/index.scss'
-import _ from 'lodash'
+// import styles from '../style/index.scss'
+// import cssModules from 'react-css-modules'
 
-@cssModules(styles)
+
+// @cssModules(styles)
 
 class App extends Component {
   static propTypes = {
