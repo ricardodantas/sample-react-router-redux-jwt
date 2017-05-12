@@ -1,7 +1,7 @@
 {
-  "name": "i2x-challenge-frontend",
+  "name": "sample-react-router-redux-jwt",
   "version": "1.0.0",
-  "description": "The I2x code challenge for Frontend position.",
+  "description": "",
   "main": "src/index.js",
   "scripts": {
     "flow": "flow",

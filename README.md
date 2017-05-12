@@ -1,5 +1,5 @@
 ## Live demo:
-[https://i2x-challenge-frontend.herokuapp.com/](https://i2x-challenge-frontend.herokuapp.com/)
+[https://sample-react-router-redux-jwt.herokuapp.com/](https://sample-react-router-redux-jwt.herokuapp.com/)
 
 ## Setup:
 
@@ -11,7 +11,6 @@ npm install
 
 ```sh
 $ npm start #dev mode
-$ npm run build #build for production
 
 OR
 
@@ -19,4 +18,8 @@ $ node run production #build package and start server
 ```
 
 ## Deploy
-The deployment is automated by Heroku, for each git push on `master` branch a deployment is made.
+```sh
+$ npm run build #build for production
+
+$ git push heroku master
+```
