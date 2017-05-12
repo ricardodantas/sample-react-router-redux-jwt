@@ -1,6 +1,3 @@
-# I2x Challenge - Frontend
-The I2x code challenge for Frontend position.
-
 ## Live demo:
 [https://i2x-challenge-frontend.herokuapp.com/](https://i2x-challenge-frontend.herokuapp.com/)
 
