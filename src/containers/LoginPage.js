@@ -45,7 +45,7 @@ class LoginPage extends Component {
       <div>
         <Header as='h2' icon textAlign='center'>
           <Header.Content>
-            i2x Challenge Frontend
+            Sample React, Redux, Rouer and JWT Auth
           </Header.Content>
         </Header>
         <LoginForm response={requestLogin} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
