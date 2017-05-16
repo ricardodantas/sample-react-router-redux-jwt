@@ -12,7 +12,7 @@
     "test": "cross-env NODE_ENV=test jest --config .jestrc",
     "test:watch": "cross-env NODE_ENV=test jest --config .jestrc --watchAll",
     "check": "npm run flow && npm run lint && npm test",
-    "build": "npm run flow && npm run clean && cross-env NODE_ENV=production webpack src/index.js --config webpack.config.production.js",
+    "build": "npm run clean && cross-env NODE_ENV=production webpack src/index.js --config webpack.config.production.js",
     "preversion": "npm run clean && npm run check",
     "postversion": "git push && git push --tags && npm run clean",
     "prepublish": "npm run clean && npm run build"
