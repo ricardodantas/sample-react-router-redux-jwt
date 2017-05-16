@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoginForm /> should render 1`] = `
+<div
+  className="ui container ui raised very padded text container segment"
+>
+  <h2>
+    Login
+  </h2>
+  <form
+    className="ui form"
+    onSubmit={[Function]}
+  >
+    <div
+      className="field"
+    >
+      <div
+        className="ui input"
+      >
+        <input
+          name="email"
+          onChange={[Function]}
+          placeholder="email"
+          type="email"
+        />
+      </div>
+    </div>
+    <div
+      className="field"
+    >
+      <div
+        className="ui input"
+      >
+        <input
+          name="password"
+          onChange={[Function]}
+          placeholder="password"
+          type="password"
+        />
+      </div>
+    </div>
+    <button
+      className="ui primary button"
+      onClick={[Function]}
+      tabIndex={undefined}
+      type="submit"
+    >
+      Sign In
+    </button>
+  </form>
+  <div
+    className="ui hidden negative message"
+  >
+    <div
+      className="header"
+    >
+      Ops...
+    </div>
+    <p>
+      Something is wrong.
+    </p>
+  </div>
+</div>
+`;
