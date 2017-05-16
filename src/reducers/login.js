@@ -1,22 +1,14 @@
 import { handleActions } from 'redux-actions'
 import {login, logout, doLogout, loginFetching, loginSuccess, loginError} from '../actions/login'
-import _ from 'lodash'
-
-const initialState = {
-  isAuthenticated: !_.isEmpty(sessionStorage.getItem('token')),
-  isFetching: false,
-  hasFailed: false,
-  hasSuccess: false,
-  token: null,
-  response: {},
-}
+import {initialState} from './initialStates/login'
 
 export default handleActions({
 
   [logout]: (state, action) => {
     return Object.assign({}, state, {
       isAuthenticated: false,
-      token: null,
+      hasFailed: false,
+      hasSuccess: false,
       response: {},
     })
   },
@@ -26,7 +18,6 @@ export default handleActions({
       isFetching: true,
       hasSuccess: false,
       hasFailed: false,
-      token: null,
       response: action
     })
   },
@@ -35,7 +26,6 @@ export default handleActions({
       isAuthenticated: true,
       isFetching: false,
       hasSuccess: true,
-      token: action.payload.token,
       response: action
     })
   },

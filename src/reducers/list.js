@@ -1,12 +1,6 @@
 import { handleActions } from 'redux-actions'
 import {listFetching, listSuccess, listError} from '../actions/list'
-
-const initialState = {
-  isFetching: false,
-  hasFailed: false,
-  hasSuccess: false,
-  items: [],
-}
+import {initialState} from './initialStates/list'
 
 export default handleActions({
 
