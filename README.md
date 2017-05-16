@@ -10,6 +10,8 @@ npm install
 ## Usage
 
 ```sh
+$ npm run test # run tests
+
 $ npm start #dev mode
 
 OR
