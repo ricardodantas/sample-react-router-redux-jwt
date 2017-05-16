@@ -1,5 +1,6 @@
 {
   "testRegex": "(/test/.*|(\\.|/))\\.spec\\.js?$",
+  "setupTestFrameworkScriptFile": "<rootDir>/test/__setup__.js",
   "moduleFileExtensions": [
     "js",
     "json"
