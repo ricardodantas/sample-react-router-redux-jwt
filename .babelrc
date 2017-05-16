@@ -1,9 +1,9 @@
 {
-  "presets": ["react", "flow", "es2015", "stage-0"],
-  "plugins": ["transform-decorators-legacy"],  
+  "presets": ["react", "flow", "es2015", "stage-0", "stage-3"],
+  "plugins": ["transform-decorators-legacy","transform-runtime"],
   "env": {
     "development": {
-      "presets": ["react-hmre"]
-    }
+      "presets": ["react-hmre"],
+    },
   }
 }
