@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "flow": "flow",
-    "production": "node server.js",
+    "production": "npm run build && node server.js",
     "start": "webpack-dev-server --open",
     "clean": "rimraf dist",
     "lint": "eslint src test",
