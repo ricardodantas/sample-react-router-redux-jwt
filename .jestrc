@@ -2,6 +2,12 @@
   "testRegex": "(/test/.*|(\\.|/))\\.spec\\.js?$",
   "setupTestFrameworkScriptFile": "<rootDir>/test/__setup__.js",
   "collectCoverage": true,
+  "coveragePathIgnorePatterns": [
+    "<rootDir>/test",
+    "<rootDir>/node_modules",
+    "<rootDir>/coverage",
+    "<rootDir>/build"
+  ],
   "coverageReporters": ["lcov"],
   "coverageThreshold": {
     "global": {
@@ -14,6 +20,11 @@
   "moduleFileExtensions": [
     "js",
     "json"
+  ],
+  "modulePathIgnorePatterns": [
+    "<rootDir>/node_modules",
+    "<rootDir>/coverage",
+    "<rootDir>/build"
   ],
   "moduleNameMapper": {
     "^.+\\.(scss)$": "<rootDir>/node_modules/jest-css-modules"
