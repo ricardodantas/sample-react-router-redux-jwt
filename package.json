@@ -6,7 +6,6 @@
   "scripts": {
     "flow": "flow",
     "production": "node server.js",
-    "heroku-postbuild": "npm run build",
     "start": "webpack-dev-server --open",
     "clean": "rimraf dist",
     "lint": "eslint src test",
