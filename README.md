@@ -1,5 +1,8 @@
 [ ![Codeship Status for ricardodantas/sample-react-router-redux-jwt](https://app.codeship.com/projects/a231ed90-1cbb-0135-858e-0ec2c05f0faf/status?branch=master)](https://app.codeship.com/projects/220092) [![Coverage Status](https://coveralls.io/repos/github/ricardodantas/sample-react-router-redux-jwt/badge.svg?branch=master)](https://coveralls.io/github/ricardodantas/sample-react-router-redux-jwt?branch=master)
 
+## Description:
+This project is a sample that shows how to use react, redux (with thunk), JWT auth, jest, enzyme, ES6, babel and axios.
+
 ## Live demo:
 [https://sample-react-router-redux-jwt.herokuapp.com/](https://sample-react-router-redux-jwt.herokuapp.com/)
 
