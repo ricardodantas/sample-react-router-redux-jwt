@@ -1,4 +1,3 @@
-// import { spy } from 'sinon'
 import * as actions from '../../src/actions/login'
 import thunk from 'redux-thunk'
 import configureMockStore from 'redux-mock-store'
