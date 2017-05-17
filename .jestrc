@@ -1,6 +1,16 @@
 {
   "testRegex": "(/test/.*|(\\.|/))\\.spec\\.js?$",
   "setupTestFrameworkScriptFile": "<rootDir>/test/__setup__.js",
+  "collectCoverage": true,
+  "coverageReporters": ["lcov"],
+  "coverageThreshold": {
+    "global": {
+      "branches": 30,
+      "functions": 30,
+      "lines": 30,
+      "statements": 30
+    }
+  },
   "moduleFileExtensions": [
     "js",
     "json"
