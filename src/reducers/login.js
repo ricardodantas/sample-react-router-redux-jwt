@@ -7,6 +7,7 @@ export default handleActions({
   [logout]: (state, action) => {
     return Object.assign({}, state, {
       isAuthenticated: false,
+      isFetching: false,
       hasFailed: false,
       hasSuccess: false,
       response: {},
@@ -18,7 +19,7 @@ export default handleActions({
       isFetching: true,
       hasSuccess: false,
       hasFailed: false,
-      response: action
+      response: {}
     })
   },
   [loginSuccess]: (state, action) => {
@@ -26,14 +27,17 @@ export default handleActions({
       isAuthenticated: true,
       isFetching: false,
       hasSuccess: true,
-      response: action
+      hasFailed: false,
+      response: action.payload || {}
     })
   },
   [loginError]: (state, action) => {
     return Object.assign({}, state, {
+      isAuthenticated: false,
       isFetching: false,
       hasFailed: true,
-      response: action
+      hasSuccess: false,
+      response: action.payload || {}
     })
   },
 }, initialState)

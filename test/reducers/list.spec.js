@@ -18,4 +18,33 @@ describe('List reducers', () => {
     expect(reducer(undefined, {})).toEqual(global.initialState)
   })
 
+  it('should handle listFetching', () => {
+    expect(reducer(global.initialState,{
+      type: actions.listFetching().type})).toEqual({
+        isFetching: true,
+        hasFailed: false,
+        hasSuccess: false,
+        items: []
+    })
+  })
+
+  it('should handle listError', () => {
+    expect(reducer(global.initialState,{
+      type: actions.listError().type})).toEqual({
+        isFetching: false,
+        hasFailed: true,
+        hasSuccess: false,
+        items: []
+    })
+  })
+
+  it('should handle listSuccess', () => {
+    expect(reducer(global.initialState,{
+      type: actions.listSuccess().type})).toEqual({
+        isFetching: false,
+        hasFailed: false,
+        hasSuccess: true,
+        items: []
+    })
+  })
 })

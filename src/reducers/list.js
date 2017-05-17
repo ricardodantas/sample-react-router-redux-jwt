@@ -17,7 +17,7 @@ export default handleActions({
       isFetching: false,
       hasFailed: false,
       hasSuccess: true,
-      items: action.payload.results
+      items: action.payload && action.payload.results ? action.payload.results : []
     })
   },
   [listError]: (state, action) => {

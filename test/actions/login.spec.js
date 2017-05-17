@@ -7,10 +7,6 @@ const mockStore = configureMockStore(middlewares)
 
 describe('Login actions', () => {
 
-  beforeEach( () => {
-
-  })
-
   it('should logout action exists', () => {
     expect(actions.logout().type).toEqual('LOGOUT')
   })
@@ -27,17 +23,18 @@ describe('Login actions', () => {
     expect(actions.loginError().type).toEqual('LOGIN_ERROR')
   })
 
-  it('should fetchLogin action auhtorized', async () => {
-
-    const {data} = await actions.fetchLogin('challenge@i2x.ai', 'pass123')
-    expect(data).toEqual(expect.objectContaining({
-      token: expect.any(String)
-    }))
-  })
-
-  it('should fetchLogin action not be auhtorized', async () => {
-    const response = await actions.fetchLogin('awssad', 'asdsad')
-    expect(response).toContain('Request failed with status code 400')
-  })
+  // @TODO: Move to "libs" or "utils" folder structure
+  // it('should fetchLogin action auhtorized', async () => {
+  //
+  //   const {data} = await actions.fetchLogin('challenge@i2x.ai', 'pass123')
+  //   expect(data).toEqual(expect.objectContaining({
+  //     token: expect.any(String)
+  //   }))
+  // })
+  //
+  // it('should fetchLogin action not be auhtorized', async () => {
+  //   const response = await actions.fetchLogin('awssad', 'asdsad')
+  //   expect(response).toContain('Request failed with status code 400')
+  // })
 
 })

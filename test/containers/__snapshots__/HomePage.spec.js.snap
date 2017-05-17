@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HomePage /> should display home page 1`] = `
+<div
+  className="ui active transition visible dimmer"
+  onClick={[Function]}
+>
+  <div
+    className="content"
+  >
+    <div
+      className="center"
+    >
+      <div
+        className="ui massive loader"
+      />
+    </div>
+  </div>
+</div>
+`;

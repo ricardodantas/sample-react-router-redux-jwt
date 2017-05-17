@@ -7,10 +7,6 @@ const mockStore = configureMockStore(middlewares)
 
 describe('list actions', () => {
 
-  beforeEach( () => {
-
-  })
-
   it('should listFetching action exists', () => {
     expect(actions.listFetching().type).toEqual('LIST_FETCHING')
   })
