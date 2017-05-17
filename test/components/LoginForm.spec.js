@@ -61,9 +61,7 @@ describe('<LoginForm />', () => {
     const response = {
       hasFailed: true,
       response: {
-        payload: {
-          message: 'Something is wrong.'
-        }
+        message: 'Something is wrong.'
       }
     }
     const component = shallow(
@@ -77,7 +75,7 @@ describe('<LoginForm />', () => {
     const errorMessage = component.find('Message')
 
     expect(errorMessage.props().hidden).toEqual(false)
-    expect(errorMessage.find('p').text()).toEqual(response.response.payload.message)
+    expect(errorMessage.find('p').text()).toEqual(response.response.message)
   })
 
 })

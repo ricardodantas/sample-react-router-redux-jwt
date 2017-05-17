@@ -33,7 +33,7 @@ export default class LoginForm extends Component {
         </Form>
         <Message negative hidden={!response.hasFailed}>
           <Message.Header>Ops...</Message.Header>
-          <p>{response.response.payload ? response.response.payload.message : 'Something is wrong.'}</p>
+          <p>{response.response ? response.response.message : 'Something is wrong.'}</p>
         </Message>
       </Container>
     )

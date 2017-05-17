@@ -1,7 +1,8 @@
 import {isEmpty} from 'lodash'
+import apiAuth from '../../utils/auth'
 
 export const initialState = {
-  isAuthenticated: !isEmpty(sessionStorage.getItem('token')),
+  isAuthenticated: apiAuth.isAuthenticated(),
   isFetching: false,
   hasFailed: false,
   hasSuccess: false,

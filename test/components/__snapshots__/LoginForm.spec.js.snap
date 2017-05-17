@@ -56,9 +56,7 @@ exports[`<LoginForm /> should render 1`] = `
     >
       Ops...
     </div>
-    <p>
-      Something is wrong.
-    </p>
+    <p />
   </div>
 </div>
 `;
