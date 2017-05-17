@@ -1,27 +1,40 @@
 import { createAction } from 'redux-actions'
+import axios from 'axios'
+import {isEmpty} from 'lodash'
 
 export const listFetching = createAction('LIST_FETCHING')
 export const listError    = createAction('LIST_ERROR')
 export const listSuccess  = createAction('LIST_SUCCESS')
 
-export function getList() {
+export async function fetchList() {
   const token = sessionStorage.getItem('token')
 
-  return dispatch => {
+  try {
+    return await axios.get('https://i2x-challenge.herokuapp.com/ai/recording/list/', {
+        headers: {
+          "content-type": "application/json",
+          "Authorization": `JWT ${token}`
+        }
+      })
+  } catch (e) {
+    return e.message
+  }
+
+}
+
+export function getList() {
+
+
+  return async dispatch => {
     dispatch(listFetching())
-    return fetch('https://i2x-challenge.herokuapp.com/ai/recording/list/',{
-        method: 'GET',
-        mode: 'cors',
-        cache: 'no-cache',
-        headers: new Headers(
-           {
-             "content-type": "application/json",
-             "Authorization": `JWT ${token}`
-          }
-        )
-     })
-    .then((response) => response.ok ? response.json() : Promise.reject(response.text()))
-    .then((responseJson) => dispatch(listSuccess(responseJson)))
-    .catch((error) => dispatch(listError(error.message)))
+    const response = await fetchList()
+    const {data} = response
+
+    if (!isEmpty(data) && !isEmpty(data.results)) {
+      dispatch(listSuccess(data))
+    } else {
+      dispatch(listError({message: response}))
+    }
+
   }
 }
