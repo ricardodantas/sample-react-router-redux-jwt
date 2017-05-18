@@ -34,5 +34,4 @@ $ git push heroku master
 ```
 
 ## TODO:
-* Finish the Flow support implementation
 * Add tests with [http://codecept.io/](http://codecept.io/)
