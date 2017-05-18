@@ -3,7 +3,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/ricardodantas/sample-react-router-redux-jwt/badge.svg?branch=master)](https://coveralls.io/github/ricardodantas/sample-react-router-redux-jwt?branch=master)
 
 ## Description:
-This project is a sample that shows how to use webpack 2, css-modules, scss, react, react-router v4, redux (with thunk), JWT auth, jest, enzyme, ES6, babel and axios.
+This project is a sample that shows how to use webpack 2, flow, css-modules, scss, react, react-router v4, redux (with thunk), JWT auth, jest, enzyme, ES6, babel and axios.
 
 ## Live demo:
 [https://sample-react-router-redux-jwt.herokuapp.com/](https://sample-react-router-redux-jwt.herokuapp.com/)
