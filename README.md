@@ -1,5 +1,5 @@
 [ ![Codeship Status for ricardodantas/sample-react-router-redux-jwt](https://app.codeship.com/projects/a231ed90-1cbb-0135-858e-0ec2c05f0faf/status?branch=master)](https://app.codeship.com/projects/220092)
-[![Build Status](https://travis-ci.org/ricardodantas/sample-react-router-redux-jwt.svg?branch=master)](https://travis-ci.org/ricardodantas/sample-react-router-redux-jwt) 
+[![Build Status](https://travis-ci.org/ricardodantas/sample-react-router-redux-jwt.svg?branch=master)](https://travis-ci.org/ricardodantas/sample-react-router-redux-jwt)
 [![Coverage Status](https://coveralls.io/repos/github/ricardodantas/sample-react-router-redux-jwt/badge.svg?branch=master)](https://coveralls.io/github/ricardodantas/sample-react-router-redux-jwt?branch=master)
 
 ## Description:
@@ -33,6 +33,6 @@ $ npm run build #build for production
 $ git push heroku master
 ```
 
-## Rodamap:
-* Finish the Flow support
-* Integration with [http://codecept.io/](http://codecept.io/)
+## TODO:
+* Finish the Flow support implementation
+* Add tests with [http://codecept.io/](http://codecept.io/)
