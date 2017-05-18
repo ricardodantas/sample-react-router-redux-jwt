@@ -1,21 +1,22 @@
 import FetchApi from './fetchApi'
 import {isEmpty} from 'lodash'
 
+// @flow
 export default class Auth extends FetchApi {
 
-  static isAuthenticated() {
+  static isAuthenticated(): boolean {
     return !isEmpty(this.getToken())
   }
 
-  static getToken() {
+  static getToken(): string {
     return sessionStorage.getItem('token')
   }
 
-  static removeToken() {
+  static removeToken(): any {
     return sessionStorage.clear()
   }
 
-  static storeToken(token = null) {
+  static storeToken(token: string = '') {
     if (isEmpty(token)) {
         throw new Error("Token is empty.")
     }
@@ -24,7 +25,7 @@ export default class Auth extends FetchApi {
     return token
   }
 
-  static async login(email, password) {
+  static async login(email: string, password: string) {
     try {
       const response = await super.post('core/login/', {
         email,

@@ -1,10 +1,10 @@
 import { handleActions } from 'redux-actions'
 import {listFetching, listSuccess, listError} from '../actions/list'
 import {initialState} from './initialStates/list'
-
+// @flow
 export default handleActions({
 
-  [listFetching]: (state, action) => {
+  [listFetching]: (state: Object, action: Object) => {
     return Object.assign({}, state, {
       isFetching: true,
       hasFailed: false,
@@ -12,7 +12,7 @@ export default handleActions({
       items: []
     })
   },
-  [listSuccess]: (state, action) => {
+  [listSuccess]: (state: Object, action: Object) => {
     return Object.assign({}, state, {
       isFetching: false,
       hasFailed: false,
@@ -20,7 +20,7 @@ export default handleActions({
       items: action.payload && action.payload.results ? action.payload.results : []
     })
   },
-  [listError]: (state, action) => {
+  [listError]: (state: Object, action: Object) => {
     return Object.assign({}, state, {
       isFetching: false,
       hasFailed: true,
@@ -28,4 +28,4 @@ export default handleActions({
       items: []
     })
   },
-}, initialState)
+}, initialState: Object)

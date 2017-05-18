@@ -1,25 +1,26 @@
 import axios from 'axios'
 import {isEmpty} from 'lodash'
 
+// @flow
 export default class FetchApi {
 
-  static baseEndpoint = 'https://i2x-challenge.herokuapp.com'
+  static baseEndpoint: string = 'https://i2x-challenge.herokuapp.com'
 
-  static config (headers = {}, anyParam = {}) {
+  static config (headers: Object = {}, anyParam: Object = {}): Object {
     return {
       headers: this.headers(headers),
       ...anyParam
     }
   }
 
-  static headers(headerParams = {}) {
+  static headers(headerParams: Object = {}): Object {
     return {
       "content-type": "application/json",
       ...headerParams
     }
   }
 
-  static setConfig(token = null) {
+  static setConfig(token: string = ''): Object {
     let config = this.config()
 
     if (!isEmpty(token)) {
@@ -29,12 +30,12 @@ export default class FetchApi {
     return config
   }
 
-  static async post(url = null, data = {}, token = null) {
+  static async post(url: string= '', data: Object = {}, token: string = '') {
     const config = this.setConfig(token)
     return await axios.post(`${this.baseEndpoint}/${url}`, data, config)
   }
 
-  static async get(url = null, token = null) {
+  static async get(url: string = '', token: string = '') {
     const config = this.setConfig(token)
     return await axios.get(`${this.baseEndpoint}/${url}`, config)
   }

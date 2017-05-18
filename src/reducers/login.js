@@ -1,10 +1,10 @@
 import { handleActions } from 'redux-actions'
 import {login, logout, doLogout, loginFetching, loginSuccess, loginError} from '../actions/login'
 import {initialState} from './initialStates/login'
-
+// @flow
 export default handleActions({
 
-  [logout]: (state, action) => {
+  [logout]: (state: Object, action: Object) => {
     return Object.assign({}, state, {
       isAuthenticated: false,
       isFetching: false,
@@ -13,7 +13,7 @@ export default handleActions({
       response: {},
     })
   },
-  [loginFetching]: (state, action) => {
+  [loginFetching]: (state: Object, action: Object) => {
     return Object.assign({}, state, {
       isAuthenticated: false,
       isFetching: true,
@@ -22,7 +22,7 @@ export default handleActions({
       response: {}
     })
   },
-  [loginSuccess]: (state, action) => {
+  [loginSuccess]: (state: Object, action: Object) => {
     return Object.assign({}, state, {
       isAuthenticated: true,
       isFetching: false,
@@ -31,7 +31,7 @@ export default handleActions({
       response: action.payload || {}
     })
   },
-  [loginError]: (state, action) => {
+  [loginError]: (state: Object, action: Object) => {
     return Object.assign({}, state, {
       isAuthenticated: false,
       isFetching: false,
@@ -40,4 +40,4 @@ export default handleActions({
       response: action.payload || {}
     })
   },
-}, initialState)
+}, initialState: Object)
