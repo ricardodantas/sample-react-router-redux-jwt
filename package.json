@@ -4,7 +4,6 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "flow": "flow",
     "production": "node server.js",
     "start": "webpack-dev-server --open",
     "clean": "rimraf dist",
@@ -44,7 +43,6 @@
     "eslint-config-airbnb": "^5.0.1",
     "eslint-plugin-react": "^3.16.1",
     "extract-text-webpack-plugin": "^2.0.0-rc.2",
-    "flow-bin": "^0.45.0",
     "generator-redux-stack": "^9.0.0",
     "html-webpack-plugin": "^2.10.0",
     "jest": "^19.0.0",
